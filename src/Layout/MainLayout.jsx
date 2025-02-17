@@ -20,7 +20,7 @@ if(loading){
 
 
     return (
-        <div className="items-center justify-center mx-auto max-w-7xl">
+        <div >
             <MyNavbar />
             <Outlet />
             <Footer />

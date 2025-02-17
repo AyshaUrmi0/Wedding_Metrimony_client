@@ -8,3 +8,25 @@ body {
     @apply min-h-screen;
     background-color: rgb(255, 239, 239); /* Light pastel pink */
 }
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-text {
+    background: linear-gradient(-45deg, #ff79c6, #bd93f9, #8be9fd);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+ 
