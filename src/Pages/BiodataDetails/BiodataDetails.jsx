@@ -51,29 +51,33 @@ const BiodataDetails = () => {
   }
  
 }
+useEffect(() => {
+  const fetchProfile = async () => {
+    try {
+      console.log("Fetching profile with ID:", id);
+      const response = await fetch(`http://localhost:5000/biodatas/${id}`);
+      if (!response.ok) throw new Error("Failed to fetch profile");
+      const data = await response.json();
+      setProfile(data);
+      console.log("Profile Data:", data);
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await fetch(`http://localhost:5000/biodatas/${id}`);
-        if (!response.ok) throw new Error("Failed to fetch profile");
-        const data = await response.json();
-        setProfile(data);
+      // Fetch similar profiles
+      const similarResponse = await fetch(`http://localhost:5000/biodatas?type=${data.type}`);
+      if (!similarResponse.ok) throw new Error("Failed to fetch similar profiles");
+      const similarData = await similarResponse.json();
+      console.log("Similar Biodatas:", similarData);
+      setSimilarProfiles(similarData.slice(0, 3));
+    } catch (err) {
+      console.error("Error fetching profile:", err);
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        // Fetch similar profiles
-        const similarResponse = await fetch(`http://localhost:5000/biodatas?type=${data.type}`);
-        if (!similarResponse.ok) throw new Error("Failed to fetch similar profiles");
-        const similarData = await similarResponse.json();
-        setSimilarProfiles(similarData.slice(0, 3));
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+  fetchProfile();
+}, [id]);
 
-    fetchProfile();
-  }, [id]);
 
   if (loading) return <div><LoadingHeart /></div>;
   if (error) return <div>Error: {error}</div>;

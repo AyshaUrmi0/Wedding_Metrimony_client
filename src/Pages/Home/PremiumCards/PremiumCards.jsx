@@ -34,7 +34,7 @@ const PremiumCards = ({item}) => {
             <strong>Occupation:</strong> {item.occupation}
           </Typography>
           <button
-                      onClick={() =>navigate(`/details/${item.id}`)}
+                      onClick={() =>navigate(`/details/${item._id}`)}
                       className="px-4 py-2 text-white rounded bg-custom-pink"
                     >
                      View Profile
@@ -48,14 +48,3 @@ const PremiumCards = ({item}) => {
 export default PremiumCards;
 
 
-
-// {
-//     "id": 1,
-//     "name": "সোহেল রহমান",
-//     "age": 30,
-//     "type": "Male",
-//     "division": "Dhaka",
-//     "occupation": "Software Engineer",
-//     "image": "https://via.placeholder.com/150",
-//     "isPremium": true
-//   },

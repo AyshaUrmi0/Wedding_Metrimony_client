@@ -10,7 +10,7 @@ const ProfileCards = () => {
   }, [sortOrder]);
 
   const fetchProfiles = (order) => {
-    fetch(`http://localhost:5000/profiles?sort=${order}`)
+    fetch(`http://localhost:5000/biodatas?sort=${order}`)
       .then((res) => res.json())
       .then((data) => setProfiles(data))
       .catch((err) => console.error("Error fetching profiles:", err));

@@ -17,10 +17,14 @@ import {
 import { ThemeProvider } from "@material-tailwind/react";
 import { router } from "./Routes/router";
 import AuthProvider from "./context/Authcontext/AuthProvider";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
  
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
+    <Elements stripe={stripePromise}>
    
     <AuthProvider>
 
@@ -30,6 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </QueryClientProvider>
    
    </AuthProvider>
+   </Elements>
     </ThemeProvider>
   </React.StrictMode>
 );

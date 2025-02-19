@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 const Banner = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
-    "https://i.ibb.co/09fqKZC/ban-bg.jpg",
-    "https://i.ibb.co/K7t1TDy/banner.jpg",
+    "https://i.ibb.co.com/5gM2LJBs/4.jpg",
+    "https://i.ibb.co.com/5WvDdj2x/11.jpg",
   ];
 
   useEffect(() => {

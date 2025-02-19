@@ -25,9 +25,9 @@ const MyNavbar = () => {
   };
 
   return (
-    <>
-      <Navbar className="sticky top-0 z-50 px-4 py-2 bg-white shadow-md">
-        <div className="flex items-center justify-between w-full">
+    <div className="w-full bg-white">
+      <Navbar className="w-full px-4 py-2 mx-auto border-none ">
+        <div className="flex items-center justify-between ">
           {/* Left Side: Logo */}
           <div className="flex items-center text-3xl font-playfair">
             <img src={logo} alt="logo" className="w-12 h-12 mr-2" />
@@ -46,7 +46,7 @@ const MyNavbar = () => {
           </div>
 
           {/* Navigation Links for Larger Screens */}
-          <div className="hidden space-x-6 lg:flex font-cinzel">
+          <div className="items-center justify-center hidden space-x-6 lg:flex font-cinzel">
             <Link to="/" className="text-lg text-gray-800 hover:text-custom-pink">
               Home
             </Link>
@@ -173,7 +173,7 @@ const MyNavbar = () => {
           )}
         </div>
       </Drawer>
-    </>
+    </div>
   );
 };
 
