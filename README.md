@@ -92,6 +92,6 @@ A responsive online matrimony platform designed to connect users with potential 
 - **Backend**: Provides APIs for authentication, biodata management, and admin features using Express and MongoDB.
 
 ## 🔑 Admin Credentials
-- **Email**: xewu@mailinator.com
-- **Password**: Aysha123
+- **Email**: admin@matrimonial.com
+- **Password**: Admin123
 
