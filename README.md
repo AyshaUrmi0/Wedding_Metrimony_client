@@ -5,7 +5,7 @@
 A responsive online matrimony platform designed to connect users with potential life partners. This project leverages modern web technologies to deliver a seamless and user-friendly experience.
 
 ## 🌐 Live Site
-[Wedding Matrimony](https://quiet-dolphin-039180.netlify.app/)
+[Wedding Matrimony](https://matimony-680c9.web.app/)
 
 ## 📝 Project Features
 1. **Responsive Design**:
